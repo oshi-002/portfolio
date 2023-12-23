@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <p>Portfolio</p>
+                </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About </a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hii , <br> I'm <span>Oshi</span> Agrawal</h1>
+            </div>
+        </div>
+        <!-- .....................................second page  -->
+    </div>
+    <div id="about">
+        <div class="about-section">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="resize img.jpg" alt="not loaded">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur est accusantium illo in
+                        impedit magnam adipisci quam aliquid dignissimos rerum odit aspernatur ipsam vitae ipsa, enim
+                        nam laudantium repellat aut!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web designing</span><br>Web Interface</li>
+                            <li><span>Coding</span><br>Know various softwares like Eclipse ,vs code, github</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Internship</span><br>Got Virtual Internship in Cognifyz Technology in the domain
+                                of Web development</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Current</span><br>Pursing B.tech from ECE branch from State Government
+                                College <br>University Institute of Technology , RGPV Bhopal</li>
+                            <li><span>Higher Education</span><br>Did my higher studies from CBSE board Chavara
+                                Vidyapeeth , Narsinghpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ............works....... -->
+
+<div id="portfolio">
+    <div class="my-work">
+        <h1>My Work</h1>
+
+    </div>
+</div>
+
+<!-- ...............contact........ -->
+<div id="contact">
+    <div class="contant-me">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <!-- <p><i class="fa-solid fa-envelope"></i>agrawaloshi5@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91-8839548349</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>oshii_36</a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>Oshi Agrawal</a>
+                </div> -->
+                <p><i class="fa-solid fa-envelope"></i>agrawaloshi5@gmail.com </p>
+                <p><i class="fa-solid fa-phone"></i>+91-8839548349</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>oshii_36</a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>Oshi Agrawal</a>
+                   
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" id="" placeholder="Your Name" required>
+                    <input type="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class=" btn btn2 ">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+
+</html>
